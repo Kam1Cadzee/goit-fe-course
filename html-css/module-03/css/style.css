@@ -1,3 +1,28 @@
+.page {
+  width: 900px;
+  margin: 0 auto; }
 
+.header {
+  height: 190px;
+  text-align: center;
+  line-height: 190px; }
+  .header__list {
+    list-style-type: none;
+    display: inline-block; }
+
+.list__item {
+  display: inline-block;
+  margin-right: 95px; }
+  .list__item_last {
+    margin-right: 0; }
+.list__link {
+  display: block;
+  padding: 2px 2px;
+  text-decoration: none;
+  font: 14px/24px "PlayfairDisplay";
+  text-transform: uppercase;
+  color: #626262; }
+  .list__link_active {
+    color: #03a9f4; }
 
 /*# sourceMappingURL=style.css.map */
