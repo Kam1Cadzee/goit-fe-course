@@ -1,28 +1,92 @@
 .page {
-  width: 900px;
-  margin: 0 auto; }
+    width: 900px;
+    margin: 0 auto;
+}
 
 .header {
-  height: 190px;
-  text-align: center;
-  line-height: 190px; }
-  .header__list {
+    height: 190px;
+    text-align: center;
+    line-height: 190px;
+}
+
+.header__list {
     list-style-type: none;
-    display: inline-block; }
+    display: inline-block;
+}
 
 .list__item {
-  display: inline-block;
-  margin-right: 95px; }
-  .list__item_last {
-    margin-right: 0; }
+    display: inline-block;
+    margin-right: 95px;
+}
+
+.list__item_last {
+    margin-right: 0;
+}
+
 .list__link {
-  display: block;
-  padding: 2px 2px;
-  text-decoration: none;
-  font: 14px/24px "PlayfairDisplay";
-  text-transform: uppercase;
-  color: #626262; }
-  .list__link_active {
-    color: #03a9f4; }
+    display: block;
+    padding: 2px 2px;
+    text-decoration: none;
+    font: 14px/24px "Playfair Display", sans-serif;
+    text-transform: uppercase;
+    color: #626262;
+}
+
+.list__link:hover {
+    color: #03a9f4;
+}
+
+.main-content {
+    font-size: 0;
+}
+
+.main-content__section {
+    margin-right: 60px;
+}
+
+.main-content__button {
+    display: block;
+    width: 162px;
+    padding: 24px 0;
+    margin: 70px auto;
+    margin-top: -60px;
+}
+
+.main-content__button:hover {
+    border: 1px solid #03a9f4;
+}
+
+.button {
+    font: 20px/24px "Playfair Display", sans-serif;
+    color: #626262;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid #626262;
+}
+
+.section {
+    width: 420px;
+    height: 480px;
+    display: inline-block;
+    margin-bottom: 130px;
+}
+
+.section__caption {
+    margin-top: 30px;
+    font: 300 14px "Ubuntu", sans-serif;
+    text-transform: uppercase;
+    color: #b4ad9e;
+}
+
+.section__title {
+    margin: 25px 0;
+    font: 30px "Playfair Display", sans-serif;
+    color: #626262;
+}
+
+.section__text {
+    font: 14px/24px "Playfair Display", sans-serif;
+    color: #626262;
+}
 
 /*# sourceMappingURL=style.css.map */

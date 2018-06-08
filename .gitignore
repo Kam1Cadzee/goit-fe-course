@@ -1,3 +1,5 @@
 .idea/
 *.scss
 *.css.map
+*.md
+.gitignore
