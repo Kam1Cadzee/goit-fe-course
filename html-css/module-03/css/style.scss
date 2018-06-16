@@ -1,0 +1,95 @@
+.page {
+  width: 900px;
+  margin: 0 auto;
+}
+.header {
+  height: 190px;
+  text-align: center;
+  line-height: 190px;
+
+  &__list {
+    list-style-type: none;
+    display: inline-block;
+  }
+
+}
+
+.list {
+
+  &__item {
+    display: inline-block;
+    margin-right: 95px;
+
+    &_last {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    display: block;
+    padding: 2px 2px;
+
+    text-decoration: none;
+    font: 14px/24px "Playfair Display", sans-serif;
+    text-transform: uppercase;
+    color: #626262;
+
+    &:hover {
+      color: #03a9f4;
+    }
+
+  }
+}
+
+.main-content{
+  font-size: 0;
+  &__section {
+    margin-right: 60px;
+  }
+
+  &__button {
+    display: block;
+    width: 162px;
+    padding: 24px 0;
+    margin: 70px auto;
+    margin-top: -60px;
+
+    &:hover {
+      border: 1px solid #03a9f4;
+    }
+  }
+}
+.button {
+  font: 20px/24px "Playfair Display", sans-serif;
+  color: #626262;
+  text-decoration: none;
+  text-align: center;
+
+  border: 1px solid #626262;
+}
+.section {
+  width: 420px;
+  height: 480px;
+  display: inline-block;
+  margin-bottom: 130px;
+
+  &__caption {
+    margin-top: 30px;
+
+    font: 300 14px "Ubuntu", sans-serif;
+    text-transform: uppercase;
+    color: #b4ad9e;
+  }
+
+  &__title {
+    margin: 25px 0;
+
+    font: 30px"Playfair Display", sans-serif;
+    color: #626262;
+  }
+
+  &__text {
+    font: 14px/24px "Playfair Display", sans-serif;
+    color: #626262;
+  }
+
+}

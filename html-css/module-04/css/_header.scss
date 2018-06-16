@@ -1,0 +1,57 @@
+.header {
+
+  padding-top: 36px;
+  margin-bottom: 90px;
+
+  &__align {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: $lh_header;
+
+  }
+}
+
+.logo {
+  color: #555252;
+  font-family: Roboto, sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: -0.6px;
+
+  &_symbol:first-letter {
+    color: $active_color;
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+
+  }
+}
+
+.nav {
+  font-size: 0;
+  float: right;
+
+
+
+  &__link {
+    display: inline-block;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+
+    color: #0f0101;
+    font-family: "Open Sans", sans-serif;;
+    font-size: 14px;
+    font-weight: 700;
+    padding-right: 30px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    &:hover {
+      color: $active_color;
+    }
+  }
+}
