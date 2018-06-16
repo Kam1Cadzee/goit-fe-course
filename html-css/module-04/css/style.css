@@ -1,5 +1,45 @@
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.header {
+  padding-top: 36px; }
+  .header__align {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 32px; }
+
+.logo {
+  color: #555252;
+  font-family: Roboto, sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: -0.6px; }
+  .logo_symbol:first-letter {
+    color: #1abc9c;
+    font-family: Roboto, sans-serif;
+    font-weight: 700; }
+
+.nav {
+  font-size: 0;
+  float: right; }
+  .nav__link {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #0f0101;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    padding-right: 30px; }
+    .nav__link:last-child {
+      padding-right: 0; }
+
 .container {
-  max-width: 1170px;
-  margin: 0 auto; }
+  max-width: 1110px;
+  margin: 0 auto;
+  box-sizing: border-box; }
 
 /*# sourceMappingURL=style.css.map */
