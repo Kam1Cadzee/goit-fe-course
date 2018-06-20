@@ -1,0 +1,48 @@
+.main {
+  background-color: #e9f0fd;
+  padding: 100px 0;
+}
+
+.collection {
+  margin: 0 -15px;
+  color: #ffffff;
+  font-family: $font_roboto;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.36px;
+  
+  &__item {
+    margin: 0 15px;
+    float: left;
+  }
+}
+
+.item {
+  max-width: 255px;
+  &:hover &__name{
+    background-color: $active_color;
+  }
+  &:hover .wrp-hover {
+    display: block;
+  }
+
+  &__pic {
+    max-width: 100%;
+    display: block;
+  }
+
+
+  &__name {
+    background-color: #333333;
+    padding: 10px;
+    text-align: left;
+
+  }
+  &__price {
+    background-color: rgba(255,255,255, .44);
+    padding: 10px;
+    float: right;
+  }
+}
+

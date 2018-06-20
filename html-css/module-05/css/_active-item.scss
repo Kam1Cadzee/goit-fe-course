@@ -1,0 +1,65 @@
+//Стили для активной карточки
+.wrp {
+  position: relative;
+}
+
+//Стили для иконок
+%style-icon {
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  position: absolute;
+  padding: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  &:hover {
+    background-color: $active_color;
+    border: 1px solid $active_color;
+  }
+}
+
+.wrp-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0,0,0, .55);
+  background-clip: content-box;
+  display: none;
+  border: 15px solid rgba(255, 255, 255, 0.55);
+
+
+  &__heart {
+    @extend %style-icon;
+    top: 90px;
+    left: 30px;
+  }
+  &__clock {
+    @extend %style-icon;
+    top: 90px;
+    left: 88px;
+  }
+  &__arrows {
+    @extend %style-icon;
+    top: 90px;
+    left: 145px;
+  }
+  &__cart {
+    @extend %style-icon;
+    top: 150px;
+    left: 30px;
+    &:hover {
+      border: 1px solid #fff;
+      background-color: #323232;
+    }
+  }
+  &__text {
+    font-family: $font_open-sans;
+    font-size: 14px;
+    line-height: 32px;
+    text-transform: uppercase;
+    letter-spacing: -0.28px;
+    vertical-align: top;
+    padding: 0 14px;
+  }
+}

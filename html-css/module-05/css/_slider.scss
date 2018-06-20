@@ -1,0 +1,52 @@
+.wrapper {
+  position: relative;
+  color: #fff;
+}
+.arrow {
+  position: absolute;
+  font-size: 104px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: rgba(102, 204, 153, .65);
+  cursor: pointer;
+
+
+  &:hover {
+    background: rgba(102, 204, 153, 1);
+  }
+}
+
+.icon-angle-right {
+  left: auto;
+  right: 0;
+}
+.slider {
+  background-image: url("../img/slide4.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+
+  padding-top: 200px;
+  padding-bottom: 270px;
+
+  &__header {
+    font-family: $font_roboto;
+    text-transform: uppercase;
+    text-align: left;
+
+    display: inline-block;
+
+  }
+  &__subtitle {
+    font-size: 24px;
+    line-height: 54px;
+  }
+
+  &__title {
+    font-size: 60px;
+    font-weight: 900;
+    letter-spacing: -1.2px;
+    line-height: 82px;
+  }
+}

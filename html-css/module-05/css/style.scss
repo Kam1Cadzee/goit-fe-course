@@ -1,0 +1,42 @@
+$active_color: #1abc9c;
+$lh_header: 32px;
+$bg_item: #e9f0fd;
+$font_roboto: Roboto, sans-serif;
+$font_open-sans:  "Open Sans", sans-serif;
+
+
+@import "fonts";
+@import "clearfix";
+@import "header";
+@import "slider";
+@import "main";
+@import "active-item";
+@import "footer";
+
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+}
+.title-with-line {
+  text-align: center;
+  color: #515151;
+  font-family: $font_roboto;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 32px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin-bottom: 80px;
+
+  &::after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    border-bottom: 7px solid $active_color;
+    width: 164px;
+    padding-top: 35px;
+  }
+}
