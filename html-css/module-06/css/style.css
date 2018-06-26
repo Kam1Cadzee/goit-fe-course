@@ -232,16 +232,17 @@
   cursor: pointer;
   width: 56px;
   height: 56px;
-  object-fit: cover;
+  background-image: url("../img/css_sprites.png");
+  background-repeat: no-repeat;
   background-color: #fce38a; }
   .avatar__icon:nth-child(1) {
-    object-position: 0px 0; }
+    background-position: 0px 0; }
   .avatar__icon:nth-child(2) {
-    object-position: -56px 0; }
+    background-position: -56px 0; }
   .avatar__icon:nth-child(3) {
-    object-position: -112px 0; }
+    background-position: -112px 0; }
   .avatar__icon:nth-child(4) {
-    object-position: -168px 0; }
+    background-position: -168px 0; }
   .avatar__icon:hover {
     background-color: #95e1d3; }
 .avatar__pic {

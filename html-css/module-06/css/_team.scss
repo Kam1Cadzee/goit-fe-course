@@ -74,12 +74,14 @@
     cursor: pointer;
     width: 56px;
     height: 56px;
-    object-fit: cover;
+    background-image: url("../img/css_sprites.png");
+    background-repeat: no-repeat;
+
 
     @for $i from 0 to 4 {
       &:nth-child(#{$i + 1}) {
-        object-position: -$i * 56px 0;
-        
+        background-position: -$i * 56px 0;
+
       }
     }
     background-color: #fce38a;
