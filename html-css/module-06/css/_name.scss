@@ -1,0 +1,35 @@
+.name {
+  text-align: center;
+
+  &__subtitle {
+    display: block;
+    padding-bottom: 22px;
+  }
+  &__title {
+    padding-bottom: 40px;
+  }
+}
+
+.subtitle {
+  color: $dark-grey;
+  font-family: $font-kaushan;
+  font-size: 24px;
+  font-weight: 400;
+}
+.title {
+  color: $dark-grey;
+  font-family: $font-montserrat;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  &_under-line::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    border-bottom: 3px solid $active-color;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}

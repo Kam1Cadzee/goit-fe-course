@@ -1,0 +1,48 @@
+.container {
+  @include make-container;
+}
+
+.header {
+  @include make-row;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  &__logo {
+    @include col;
+    @include make-col(auto);
+    color: $primary-color;
+    font-family: $font-montserrat;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: capitalize;
+    word-spacing: -.3em;
+    text-decoration: none;
+  }
+
+  &__nav {
+    @include col;
+    @include make-col(5);
+
+
+  }
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  &__link {
+    color: $primary-color;
+    font-family: $font-montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-bottom: 3px solid transparent;
+
+    &:hover {
+      color: $active-color;
+      border-bottom: 3px solid $active-color;
+
+    }
+  }
+}

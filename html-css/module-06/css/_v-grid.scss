@@ -1,0 +1,122 @@
+$b-xs: xs;
+$b-sm: sm;
+$b-md: md;
+$b-lg: lg;
+$b-xl: xl;
+
+
+$name-breakpoints : ($b-xs, $b-sm, $b-md, $b-lg, $b-xl);
+
+$grid-breakpoints: (
+        nth($name-breakpoints, 1) : 360px,
+        nth($name-breakpoints, 2) : 576px,
+        nth($name-breakpoints, 3) : 768px,
+        nth($name-breakpoints, 4) : 960px,
+        nth($name-breakpoints, 5) : 1100px
+);
+
+$container-max-widths: (
+        nth($name-breakpoints, 1) : 100%,
+        nth($name-breakpoints, 2) : 440px,
+        nth($name-breakpoints, 3) : 520px,
+        nth($name-breakpoints, 4) : 760px,
+        nth($name-breakpoints, 5) : 950px
+);
+@function get-breakpoint($breakpoint) {
+  @return map_get($grid-breakpoints, $breakpoint);
+}
+@function get-container-max-width($breakpoint) {
+  @return map_get($container-max-widths, $breakpoint);
+}
+@function get-name($i) {
+  @return nth($name-breakpoints, $i);
+}
+$grid-columns: 12;
+$max-width: 1180;
+$grid-gutter-width: percentage(30/$max-width);
+
+
+//@for $i from length($name-breakpoints) to 0 {
+//  @media screen and (max-width: get-breakpoint(get-name($i))) {
+//
+//    :root {
+//      --width: get-container-max-width(get-name($i));
+//    }
+//  }
+//
+//}
+
+@mixin make-container() {
+  //max-width: var(--width, #{$max-width}px);
+  //width: 80%;
+  max-width: #{$max-width}px;
+
+  padding-right: ($grid-gutter-width / 2);
+  padding-left: ($grid-gutter-width / 2);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin make-row() {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: ($grid-gutter-width / -2);
+  margin-left: ($grid-gutter-width / -2);
+
+
+}
+@mixin col() {
+  position: relative;
+  margin-right: ($grid-gutter-width / 2);
+  margin-left: ($grid-gutter-width / 2);
+  box-sizing: border-box;
+}
+
+@mixin set-flex($size: auto, $grow: 0) {
+  @if($size == auto){
+    flex: $grow 0 #{$size};
+  }
+  @else {
+    flex: $grow 0 calc(100% / #{$grid-columns} * #{$size} - #{$grid-gutter-width});
+  }
+}
+@mixin make-col($size: auto, $breakpoint: null, $grow: 0) {
+  @if($breakpoint == null) {
+    @include set-flex($size, $grow);
+  }
+
+  @for $i from length($name-breakpoints) to 0 {
+    @if(nth($name-breakpoints, $i) == $breakpoint)
+    {
+      @media screen  and (max-width: get-breakpoint(get-name($i))){
+        @include set-flex($size, $grow);
+      }
+
+    }
+  }
+}
+@mixin margin-b() {
+  margin-bottom: $grid-gutter-width;
+}
+.debug-con {
+  @include make-container;
+}
+.debug-row {
+  @include make-row;
+
+}
+.debug-item {
+  @include col;
+  @include make-col(auto, null, 1);
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0, .2);
+
+    z-index: 1000;
+  }
+}

@@ -1,0 +1,24 @@
+$cyan: #95e1d3;
+$pink: #f99;
+$grey: #999;
+$dark-grey: #333;
+$font-montserrat: Montserrat, sans-serif;
+$font-kaushan: "Kaushan Script", sans-serif;
+$font-roboto: Roboto, sans-serif;;
+
+
+$primary-color: $cyan;
+$active-color: $pink;
+$text-color: $grey;
+$title-text: $dark-grey;
+
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700|Roboto:300,300i,400&subset=cyrillic');
+@import "v-grid";
+@import "debug";
+@import "name";
+@import "subject";
+@import "header";
+@import "services";
+@import "team";
+
+
