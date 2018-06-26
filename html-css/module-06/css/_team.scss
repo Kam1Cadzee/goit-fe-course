@@ -18,6 +18,7 @@
 
   &__grid {
     @include make-row;
+    margin-bottom: 80px;
   }
 }
 

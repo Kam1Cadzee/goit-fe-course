@@ -1,0 +1,51 @@
+.footer {
+  border-top: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+
+  &__copyright {
+    text-transform: none;
+  }
+}
+.author {
+  color: $active_color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.form {
+  display: flex;
+
+  &__email {
+    border: 1px solid #e7e7e7;
+    padding: 7px;
+
+    color: #cccccc;
+    font-family: $font_roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    font-style: italic;
+
+  }
+}
+
+.btn {
+  font-family: $font-montserrat;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: $primary-color;
+  border: none;
+  padding: 0 33px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $active_color;
+  }
+}
