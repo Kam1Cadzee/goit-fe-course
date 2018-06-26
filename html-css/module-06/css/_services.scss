@@ -17,10 +17,11 @@
 
   display: flex;
   align-items: flex-start;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
+  padding: 5px 20px;
 
   &__pic {
-    margin: 0 16px;
+    margin-right: 24px;
   }
 
   &__title {
