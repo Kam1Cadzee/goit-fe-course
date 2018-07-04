@@ -1,0 +1,55 @@
+.services {
+
+  @include make-container;
+
+  &__title {
+    text-align: center;
+    padding-top: 100px;
+    margin: 0;
+
+  }
+  &__subtitle {
+    text-align: center;
+    padding-top: 10px;
+    margin: 0;
+  }
+  &__items {
+    @include make-row;
+    padding-top: 80px;
+    padding-bottom: 120px;
+  }
+  &__product {
+    @include col;
+    @include make-col(4);
+
+  }
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  &__text {
+    font-family: $font_roboto;
+    color:  $primary-color-light;
+    font-size: 1.4rem;/* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+  }
+}
+.picture {
+  border: 3px solid $secondary-color;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  &__src {
+    margin: 0 auto;
+  }
+}

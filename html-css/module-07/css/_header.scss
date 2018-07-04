@@ -1,0 +1,37 @@
+.page {
+  padding-top: 40px;
+  margin: 0;
+}
+
+.header {
+  @include make-container;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  font-family: $font-wisdom;
+  color:  $secondary-color;
+  font-size: 2.6rem;/* Приближение из-за подстановки шрифтов */
+  line-height: 1.577;/* Приближение из-за подстановки шрифтов */
+
+}
+
+.nav {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+
+  &__link {
+    font-family: $font-montserrat;
+    color:  $primary-color-dark;
+    font-size: 1.4rem;/* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    line-height: 2.929;/* Приближение из-за подстановки шрифтов */
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}

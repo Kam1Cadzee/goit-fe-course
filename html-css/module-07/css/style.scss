@@ -1,0 +1,28 @@
+@import "fonts";
+@import "variables";
+@import "v-grid";
+@import "header";
+@import "services";
+@import "feedback";
+:root {
+  font-size: 10px;
+}
+.main-title {
+  font-family: $font-montserrat;
+  color:  var(--color-main-title, $primary-color-dark);
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+.subtitle {
+  color: $primary-color;
+  font-family: $font-droid;
+  font-size: 16px;
+}
+.secondary-title {
+  color: var(--color-secondary-title, $primary-color-dark);
+  font-family: $font-montserrat;
+  font-size: 18px;
+  font-weight: 700;
+}
