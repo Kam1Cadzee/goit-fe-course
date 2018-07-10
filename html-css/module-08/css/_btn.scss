@@ -1,0 +1,23 @@
+.btn {
+  font-family: $font-montserrat;
+  color:  #ffffff;
+  font-size: 1.399rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+
+  @include media($b-xs) {
+    display: inline-block;
+  }
+  &_border {
+    border: 2px solid var(--color-border, #fff);
+    color: var(--color-border, #fff);
+    border-radius: 30px;
+  }
+  &_fill {
+    border-color: $pink;
+    background: $pink;
+  }
+}

@@ -8,7 +8,7 @@ $b-xl: 1200px;
 
 
 $grid-columns: 12;
-$max-width: 940px !default;
+$max-width: 100% !default;
 $grid-gutter-width: 30px;
 
 @mixin media-up($break) {
@@ -40,7 +40,6 @@ $grid-gutter-width: 30px;
 
 @mixin container($width: $max-width) {
   max-width: $width;
-
   padding-right: ($grid-gutter-width / 2);
   padding-left: ($grid-gutter-width / 2);
   margin-right: auto;

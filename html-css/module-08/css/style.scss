@@ -1,4 +1,13 @@
+$mobile-first: true;
 @import "variables";
 @import "v-grid";
 @import "debug";
+@import "btn";
+@import "header";
+@import "team";
+
+
+:root {
+  font-size: 10px;
+}
 
