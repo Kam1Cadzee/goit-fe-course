@@ -9,3 +9,8 @@ $cyan: #1cd7ad;
 $yellow: #ffa507;
 $blue: #4e73db;
 
+$colors: $pink, $cyan, $yellow, $blue;
+
+@function getColor($count) {
+  @return nth($colors, $count);
+}

@@ -8,6 +8,7 @@
   padding: 10px 15px;
   display: block;
 
+  transition: .2s;
   @include media($b-xs) {
     display: inline-block;
   }
@@ -15,9 +16,18 @@
     border: 2px solid var(--color-border, #fff);
     color: var(--color-border, #fff);
     border-radius: 30px;
+    &:hover {
+      border-color: $pink;
+    }
   }
   &_fill {
     border-color: $pink;
     background: $pink;
+    &:hover {
+      background-color: transparent;
+    }
+  }
+  &:hover {
+    color: $pink;
   }
 }

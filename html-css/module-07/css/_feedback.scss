@@ -39,18 +39,18 @@
   }
 
   &__text {
-    border: 1px solid #cccccc;
     padding: 15px;
     margin-bottom: 30px;
-    border-radius: 2px;
     font-family: $font-montserrat;
     font-size: 14px;
     font-weight: 700;
+    border: none;
     &:valid {
-      border: 2px solid green;
+      outline: 2px solid green;
     }
     &:invalid {
-      border: 2px solid #ac3932;
+      outline: 2px solid #ac3932;
+
     }
     &::placeholder {
       color: #bbbbbb;

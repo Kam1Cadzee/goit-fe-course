@@ -13,6 +13,9 @@
     font-weight: 700;
     text-align: center;
     margin-bottom: 20px;
+    @include media($b-sm) {
+      margin-bottom: 50px;
+    }
   }
 }
 .partners {
@@ -20,11 +23,14 @@
   justify-content: center;
   max-width: 940px;
   margin:0 auto;
+  @include media($b-md) {
+    margin-bottom: 40px;
+  }
 }
 .card {
   @include col;
   @include make-col(10);
-  @include make-col(5, $b-sm);
+  @include make-col(4.1, $b-sm);
   @include make-col(3, $b-lg);
   margin-bottom: 20px;
 
@@ -44,6 +50,12 @@
     font-weight: 300;
     text-align: center;
   }
+  @for $i from 1 to 5 {
+    &:nth-child(#{$i}) .avatar__icon {
+      background-color: getColor($i);
+    }
+  }
+
 }
 .avatar {
   width: 120px;
@@ -58,7 +70,6 @@
   &__icon {
     display: flex;
     padding: 10px;
-    background-color: $pink;
     position: absolute;
     right: -5px;
     bottom: 0;

@@ -28,7 +28,7 @@
   font-weight: 700;
   text-align: center;
   text-decoration: none;
-  @include media($b-xs) {
+  @include media($b-sm) {
     order: -1;
   }
 
@@ -42,8 +42,11 @@
   text-transform: uppercase;
   line-height: 1.3;
 
-  @include media($b-xs) {
+  @include media($b-sm) {
     font-size: 3.25rem;
+  }
+  @include media($b-md) {
+    font-size: 5rem;
   }
 }
 .subtitle {
@@ -52,6 +55,9 @@
   font-size: 1.8rem;/* Приближение из-за подстановки шрифтов */
   font-weight: 300;
   text-align: center;
+  @include media($b-sm) {
+    font-size: 2.4rem;
+  }
 }
 .header {
   display: flex;
@@ -61,7 +67,7 @@
   max-width: 940px;
   margin:0 auto;
 
-  @include media($b-xs) {
+  @include media($b-sm) {
    justify-content: flex-start;
     margin-bottom: 100px;
     padding: 20px;
@@ -71,10 +77,12 @@
   &__logo {
     padding-top: 100px;
     padding-bottom: 30px;
-    @include media($b-xs) {
+    width: 100%;
+    @include media($b-sm) {
       padding: 0;
-      flex-grow: 1;
       text-align: left;
+      flex-grow: 1;
+      width: auto;
     }
   }
 }
