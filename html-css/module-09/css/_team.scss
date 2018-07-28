@@ -1,0 +1,74 @@
+.team {
+  --color-border: $pink;
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+
+  &__title {
+    font-family: $font-montserrat;
+    color:  #333333;
+    font-size: 2.198rem;/* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    @include media(xs()) {
+      margin-bottom: 50px;
+    }
+  }
+}
+.partners {
+  margin:0 auto;
+  @include media(md()) {
+    margin-bottom: 40px;
+  }
+}
+.card {
+  margin-bottom: 20px;
+
+  &__name {
+    font-family: $font-montserrat;
+    color:  $dark-grey;
+    font-size: 1.397rem;/* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    text-align: center;
+    padding: 20px 0;
+
+  }
+  &__text {
+    font-family: $font-roboto;
+    color:  $grey;
+    font-size: 1.397rem;/* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    text-align: center;
+  }
+
+
+}
+[class^="col-"] {
+  @for $i from 1 to 5 {
+    &:nth-child(#{$i}) .avatar__icon {
+      background-color: getColor($i);
+    }
+  }
+}
+.avatar {
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  position: relative;
+
+  &__pic {
+    max-width: 100%;
+    border-radius: 50%;
+  }
+  &__icon {
+    display: flex;
+    padding: 10px;
+    position: absolute;
+    right: -5px;
+    bottom: 0;
+    border-radius: 50%;
+    border: 4px solid #fff;
+  }
+}

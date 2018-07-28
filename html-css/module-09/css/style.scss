@@ -1,0 +1,60 @@
+$mobile-first: true;
+@mixin media-up($break) {
+  @media screen and (min-width: $break) {
+    @content;
+  }
+}
+@mixin media-down($break) {
+  @media screen and (max-width: $break) {
+    @content;
+  }
+}
+@mixin media($break) {
+
+  @if($mobile-first) {
+    @include media-up($break) {
+      @content;
+    }
+  }
+  @else {
+    @include media-down($break) {
+      @content;
+    }
+  }
+}
+@function xs() {
+  @return map_get($grid-breakpoints, xs);
+}
+@function sm() {
+  @return map_get($grid-breakpoints, sm);
+}
+@function md() {
+  @return map_get($grid-breakpoints, md);
+}
+
+$black: #1a1915;
+$dark-grey: #333333;
+$grey: #666666;
+$pink: #ff4e50;
+$cyan: #1cd7ad;
+$yellow: #ffa507;
+$blue: #4e73db;
+
+$my-colors: $pink, $cyan, $yellow, $blue;
+
+@function getColor($count) {
+  @return nth($my-colors, $count);
+}
+
+
+@import "bootstrap/bootstrap-grid";
+@import "variables";
+@import "btn";
+@import "header";
+@import "team";
+
+
+:root {
+  font-size: 10px;
+}
+

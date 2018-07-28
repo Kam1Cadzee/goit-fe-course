@@ -1,0 +1,88 @@
+.wrapper {
+  background-color: #000;
+  background-image: url("../img/Vector Smart Object-m.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  @include media(xs()) {
+    background-image: url("../img/Vector Smart Object-t.png");
+  }
+  @include media(md()) {
+     background-image: url("../img/Vector Smart Object.png");
+       background-size: cover;
+   }
+  padding: 14px;
+  padding-bottom: 100px;
+  text-align: center;
+  &__subtitle {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 30px;
+  }
+}
+.logo {
+  font-family: $font-montserrat;
+  color:  #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  @include media(sm()) {
+    order: -1;
+  }
+
+}
+.title {
+  font-family: $font-montserrat;
+  color:  #ffffff;
+  font-size: 3rem;/* Приближение из-за подстановки шрифтов */
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.3;
+
+  @include media(sm()) {
+    font-size: 3.25rem;
+  }
+  @include media(md()) {
+    font-size: 5rem;
+  }
+}
+.subtitle {
+  font-family: $font-roboto;
+  color:  #ffffff;
+  font-size: 1.8rem;/* Приближение из-за подстановки шрифтов */
+  font-weight: 300;
+  text-align: center;
+  @include media(sm()) {
+    font-size: 2.4rem;
+  }
+}
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 940px;
+  margin:0 auto;
+
+  @include media(sm()) {
+   justify-content: flex-start;
+    margin-bottom: 100px;
+    padding: 20px;
+  }
+
+
+  &__logo {
+    padding-top: 100px;
+    padding-bottom: 30px;
+    width: 100%;
+    @include media(sm()) {
+      padding: 0;
+      text-align: left;
+      flex-grow: 1;
+      width: auto;
+    }
+  }
+}
