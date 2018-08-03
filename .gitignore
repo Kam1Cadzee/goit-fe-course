@@ -1,3 +1,4 @@
 .idea/
 *.css.map
 *.md
+node_modules

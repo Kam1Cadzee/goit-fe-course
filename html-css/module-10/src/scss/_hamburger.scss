@@ -1,0 +1,92 @@
+.toggle-hamburger {
+  background-color: transparent;
+  display: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 46px;
+  height: 46px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  @include media($b-md) {
+    display: block;
+    @include col;
+    @include make-col(auto);
+  }
+}
+
+.toggle-hamburger:focus {
+  outline: none;
+}
+
+.toggle-hamburger span {
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 6px;
+  right: 6px;
+  height: 8px;
+  background: $yellow;
+}
+
+.toggle-hamburger span::before, .toggle-hamburger span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: $yellow;
+  content: "";
+}
+
+.toggle-hamburger span::before {
+  top: -10px;
+}
+
+.toggle-hamburger span::after {
+  bottom: -10px;
+}
+
+.toggle-hamburger span {
+  transition: background 0.3s;
+}
+
+.toggle-hamburger span::before, .toggle-hamburger span::after {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0.0s;
+}
+
+.toggle-hamburger span::before {
+
+  transition-property: top, -webkit-transform;
+}
+
+.toggle-hamburger span::after {
+  transition-property: bottom, -webkit-transform;
+}
+
+#menu {
+  display: none;
+}
+
+#menu:checked + .toggle-hamburger {
+  span {
+    background: none;
+    &::after, &::before {
+      background-color: darken($yellow, 30);
+      transition-delay: 0.0s, 0.3s;
+    }
+    &::after {
+      bottom: 0;
+      transform: rotate(-45deg);
+    }
+    &::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+  }
+}
+#menu:checked ~ .nav {
+  display: flex;
+}

@@ -1,0 +1,113 @@
+.team {
+
+  &__name {
+    padding-top: 7px;
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    color: $dark-grey;
+    font-family: $font_roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 90px;
+    padding: 0 8.333333%;
+  }
+
+  &__grid {
+    @include row();
+
+    @include media($b-lg) {
+      justify-content: center;
+    }
+    margin-bottom: 80px;
+  }
+}
+
+.member {
+  @include col;
+  @include make-col(4);
+  @include media($b-lg) {
+    @include make-col(5);
+  }
+
+  @include media($b-sm) {
+    @include make-col(11);
+
+  }
+  text-align: center;
+
+  &__name {
+    padding-top: 40px;
+    padding-bottom: 5px;
+  }
+
+  &__profession {
+    color: $grey;
+    font-family: $font_roboto;
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 24px;
+    font-style: italic;
+
+  }
+  &__back {
+    background-color: $primary-color;
+    position: relative;
+    max-width: 380px;
+    margin: auto;
+  }
+}
+
+.avatar {
+  &_active {
+    transition: .2s;
+
+    &:hover {
+      transform: translate(-10px, -10px);
+      & > .avatar__front {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__front {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+
+    opacity: 0;
+    transition: .2s;
+
+  }
+  &__icon {
+    display: block;
+    margin-right: 1px;
+    cursor: pointer;
+    width: 56px;
+    height: 56px;
+    box-sizing: border-box;
+    padding: 8px;
+
+    fill: $active_color;
+    background-color: #fce38a;
+    transition: .2s;
+
+    &:hover {
+      background-color: $active_color;
+      fill: #fff;
+    }
+  }
+  &__pic {
+    max-width: 100%;
+    display: block;
+  }
+}
