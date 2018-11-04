@@ -1,0 +1,87 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background: #fff;
+  display: flex;
+}
+
+.container {
+  margin: auto;
+  box-shadow: 0 0 2px 2px rgba(#414141, 0.2);
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  width: 80%;
+}
+
+.wrp {
+  overflow: auto;
+  max-height: 90vh;
+  flex-grow: 1;
+}
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+
+  overflow: scroll;
+  thead {
+    width: 100%;
+  }
+  td {
+    width: 33%;
+  }
+}
+.mdc-btn {
+  min-width: 88px;
+  height: 36px;
+  padding: 0 16px;
+  border: 0;
+  outline: 0;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: #00796b;
+  cursor: pointer;
+  margin-top: 10px;
+
+  &:disabled {
+    background-color: darken(#00796b, 14%);
+    cursor: inherit;
+  }
+
+  &_yellow {
+    background-color: #d6d585;
+    color: #000;
+  }
+}
+
+
+.menu-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+}
+.field-text {
+  padding: 4px;
+  outline: 0;
+  border: 0;
+  color: #263238;
+  font-size: 18px;
+  background-color: transparent;
+  display: block;
+  &::placeholder {
+    color: #616161;
+  }
+  &_border {
+    border-bottom: 2px solid #00796b;
+  }
+}
+
+tr:nth-child(even) {
+  background-color: #a2c5bb;
+}
+td {
+  padding: 8px;
+}

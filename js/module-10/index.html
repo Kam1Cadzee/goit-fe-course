@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<div class="container">
+  <div class="panel">
+    <form class="menu-form">
+      <fieldset>
+        <legend>Добавить нового пользователя</legend>
+        <input type="text" name="name" id="name" class="field-text field-text_border" placeholder="Name">
+        <input type="text" name="age" id="age" class="field-text field-text_border" placeholder="Age">
+        <button class="mdc-btn js-add"  type="submit">Добавить</button>
+      </fieldset>
+      <fieldset>
+        <legend>Обновить пользователя</legend>
+        <input type="text" name="id" id="id_user" class="field-text field-text_border" placeholder="Id">
+        <input type="text" name="name" id="old_name" class="field-text field-text_border" placeholder="Name">
+        <input type="text" name="age" id="old_age" class="field-text field-text_border" placeholder="Age">
+        <button class="mdc-btn js-update"  type="submit">Обновить</button>
+      </fieldset>
+      <fieldset>
+        <legend>Удалить пользователя</legend>
+        <input type="text" name="id" id="id_remove_user" class="field-text field-text_border" placeholder="Id">
+        <button class="mdc-btn js-remove"  type="submit">Удалить</button>
+      </fieldset>
+      <fieldset>
+        <legend>Вернуть одного пользователя</legend>
+        <input type="text" name="id" id="id_get_user" class="field-text field-text_border" placeholder="Id">
+        <button class="mdc-btn js-get"  type="submit">ОК</button>
+      </fieldset>
+      <fieldset>
+        <button class="mdc-btn js-get-all"  type="submit">Посмотреть всех пользователей</button>
+        <button class="mdc-btn js-clear"  type="submit">Очистить</button>
+        <p class="action"></p>
+      </fieldset>
+    </form>
+  </div>
+  <div class="wrp">
+    <table>
+      <thead>
+      <tr>
+        <td>ID</td>
+        <td>NAME</td>
+        <td>AGE</td>
+      </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
+<script src="js/mylib.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
