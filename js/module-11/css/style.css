@@ -1,0 +1,40 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background: #fff;
+  display: flex; }
+
+.items {
+  display: flex;
+  flex-wrap: wrap; }
+
+.card {
+  box-shadow: 1px 1px 5px grey;
+  margin: 10px;
+  padding: 8px;
+  width: 300px; }
+
+.pic {
+  margin: 8px;
+  position: relative; }
+  .pic .title {
+    text-align: center; }
+  .pic img {
+    max-width: 100%; }
+
+.form {
+  width: 400px; }
+
+.box-color {
+  width: 20px;
+  position: absolute;
+  height: 20px;
+  top: 0px;
+  border: 2px solid #fff;
+  right: 0px;
+  box-shadow: 0 0 4px black; }
+  .box-color-gray {
+    background-color: gray; }
+  .box-color-black {
+    background-color: black; }
+
+/*# sourceMappingURL=style.css.map */

@@ -79,7 +79,7 @@ function getAllUsers() {
 
 }
 function createUser(user) {
-    return `<tr><td>${user.id}</td><td>${user.name}</td><td>${user.age}</td></tr>`
+    return `<tr><td>${user.id ? user.id : user._id}</td><td>${user.name}</td><td>${user.age}</td></tr>`
 }
 function addUser(name, age) {
 
@@ -94,7 +94,8 @@ function addUser(name, age) {
         }}).then(response => response.json())
 .then(data => {
         data = data.data;
-    element('.action').innerHTML = `Новый пользователь. Id: ${data._id}, Name: ${data.name}, Age: ${data.age}`;
+    const tbody = element('tbody');
+    tbody.innerHTML = createUser(data);
 })
 .catch(error => log(error));
 
@@ -110,7 +111,8 @@ function updateUser(id, user) {
     }).then(response => response.json())
 .then(data => {
         data = data.data;
-    element('.action').innerHTML = `Пользователь обновлен. Id: ${data._id}, Name: ${data.name}, Age: ${data.age}`;
+    const tbody = element('tbody');
+    tbody.innerHTML = createUser(data);
 })
 .catch(error => log(error));
 }
@@ -118,8 +120,11 @@ function updateUser(id, user) {
 function removeUser(id) {
     fetch(REF + id, {
         method: 'DELETE'
-    }).then(() => {
-        element('.action').innerHTML = `Пользователь c Id: ${data._id}, удален`;
+    }).then((data) => {
+        if(data.statusText) {
+        element('.action').innerHTML = `Пользователь c Id: ${id}, удален`;
+        element('tbody').innerHTML = '';
+    }
 })
 .catch(error => log('Error: ' + error));
 
